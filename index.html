@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real-Time Weather Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="dashboard-container">
+        <h1>Weather Dashboard</h1>
+        
+        <!-- Search functionality to retrieve weather by city name -->
+        <form id="search-form">
+            <input type="text" id="city-input" placeholder="Enter city name (e.g., Mangalore)" required autocomplete="off">
+            <button type="submit" id="search-btn">Search</button>
+        </form>
+
+        <!-- Error Container (Hidden by default) -->
+        <div id="error-message" class="hidden"></div>
+
+        <!-- Weather Metrics Container (Hidden by default) -->
+        <div id="weather-card" class="hidden">
+            <h2 id="display-city">City Name</h2>
+            <div class="metrics">
+                <div class="metric-box">
+                    <span class="label">Temperature</span>
+                    <span id="temp-val" class="value">--°C</span>
+                </div>
+                <div class="metric-box">
+                    <span class="label">Humidity</span>
+                    <span id="humidity-val" class="value">--%</span>
+                </div>
+                <div class="metric-box">
+                    <span class="label">Wind Speed</span>
+                    <span id="wind-val" class="value">-- km/h</span>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
